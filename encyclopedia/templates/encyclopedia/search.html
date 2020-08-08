@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block body %}
+    <h2>Search Results</h2>
+
+    <ul>
+        {% for item in list  %}
+            <li><a href="{{item}}">{{item}}</a></li>
+        {% empty %}
+            <li>No Results Found</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
